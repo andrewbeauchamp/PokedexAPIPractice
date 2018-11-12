@@ -18,13 +18,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        pokemonIDTextField.resignFirstResponder()
-        
-        //Checking to make sure the text field has a value
-        guard let pokemonID = pokemonIDTextField.text else {
-            return
-        }
-        
     }
 
     @IBOutlet weak var pokemonIDTextField: UITextField!
@@ -32,9 +25,19 @@ class ViewController: UIViewController {
     
     
     @IBAction func submitButtonTapped(_ sender: Any) {
+        pokemonIDTextField.resignFirstResponder()
         
+        //Checking to make sure the text field has a value
+        guard let pokemonID = pokemonIDTextField.text else {
+            return
     }
-    
-    
+        
+        //clearing out text field
+        pokemonIDTextField.text = ""
+        //Replacing spaces in the name/title with + so they can be used as part of the url
+        let pokemonIDURL = pokemonID.replacingOccurrences(of: " ", with: "+")
+        //Building our complete request URL
+        let requestURL = pokemonAPIBaseURL + pokemonID
+        
 }
-
+}
