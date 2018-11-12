@@ -12,7 +12,7 @@ import SwiftyJSON
 
 class ViewController: UIViewController {
 
-    let pokemonAPIBaseURL = "https://pokeapi.co/v2/pokemon"
+    let pokemonAPIBaseURL = "https://pokeapi.co/api/v2/pokemon/"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +25,7 @@ class ViewController: UIViewController {
     
     
     @IBAction func submitButtonTapped(_ sender: Any) {
+        
         pokemonIDTextField.resignFirstResponder()
         
         //Checking to make sure the text field has a value
@@ -41,11 +42,13 @@ class ViewController: UIViewController {
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
-                self.pokemonDescTextView.text = json["pokemon"].stringValue
+                self.pokemonDescTextView.text = json["name"].stringValue
             case .failure(let error) :
                 self.pokemonDescTextView.text = "Invalid selection entered or an error occured please try again"
                 print(error.localizedDescription)
             }
         }
+ 
+    }
 }
-}
+
