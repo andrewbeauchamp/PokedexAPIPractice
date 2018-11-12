@@ -18,43 +18,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pokemon Id or name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y3T-9F-Cu4">
-                                <rect key="frame" x="99" y="56" width="177" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pokemon Id or name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y3T-9F-Cu4">
+                                <rect key="frame" x="111" y="56" width="153" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jpd-P5-Usd">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jpd-P5-Usd">
                                 <rect key="frame" x="0.0" y="173" width="375" height="494"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LfO-ei-Rwz">
-                                <rect key="frame" x="136" y="115" width="102" height="32"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LfO-ei-Rwz">
+                                <rect key="frame" x="161.5" y="115" width="52" height="32"/>
+                                <color key="backgroundColor" red="1" green="0.13041957600000001" blue="0.056049784540000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" title="Submit"/>
-                                <connections>
-                                    <action selector="submitButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HBa-cd-uUj"/>
-                                </connections>
+                                <state key="normal" title="Submit">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="jpd-P5-Usd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Qql-2G-VrG"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jpd-P5-Usd" secondAttribute="bottom" id="SFN-sF-1Gx"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jpd-P5-Usd" secondAttribute="trailing" id="U2b-ey-VM4"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LfO-ei-Rwz" secondAttribute="trailing" constant="137" id="fTG-E6-A72"/>
-                            <constraint firstItem="LfO-ei-Rwz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="136" id="kbf-rk-LoV"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="y3T-9F-Cu4" secondAttribute="trailing" constant="99" id="pPo-QO-wvV"/>
-                            <constraint firstItem="y3T-9F-Cu4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="99" id="tqt-Mu-iD8"/>
+                            <constraint firstItem="LfO-ei-Rwz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2hd-yB-u7m"/>
+                            <constraint firstItem="y3T-9F-Cu4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="36" id="Hwo-DA-3kV"/>
+                            <constraint firstItem="y3T-9F-Cu4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="111" id="Xc4-3n-grj"/>
+                            <constraint firstItem="jpd-P5-Usd" firstAttribute="top" secondItem="LfO-ei-Rwz" secondAttribute="bottom" constant="26" id="YyO-iJ-WBD"/>
+                            <constraint firstItem="y3T-9F-Cu4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="an0-Jr-Dgd"/>
+                            <constraint firstItem="LfO-ei-Rwz" firstAttribute="top" secondItem="y3T-9F-Cu4" secondAttribute="bottom" constant="29" id="aoT-vw-Sln"/>
+                            <constraint firstItem="jpd-P5-Usd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="c4s-Cg-ebD"/>
+                            <constraint firstItem="LfO-ei-Rwz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="161.5" id="fGX-25-SXK"/>
+                            <constraint firstItem="jpd-P5-Usd" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="pId-kG-tGT"/>
+                            <constraint firstItem="jpd-P5-Usd" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="sHj-Qf-wgH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="pokemonDescTextView" destination="jpd-P5-Usd" id="7yg-mb-76T"/>
-                        <outlet property="pokemonIDTextField" destination="y3T-9F-Cu4" id="YuB-iC-LEk"/>
+                        <outlet property="pokemonDescTextView" destination="jpd-P5-Usd" id="0Kz-0K-CAy"/>
+                        <outlet property="pokemonIDTextField" destination="y3T-9F-Cu4" id="Nth-CP-FQh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -12,7 +12,7 @@ import SwiftyJSON
 
 class ViewController: UIViewController {
 
-    let pokemonAPIBaseURL = "https://pokeapi.co/docs/v2"
+    let pokemonAPIBaseURL = "https://pokeapi.co/v2/pokemon"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,10 +34,18 @@ class ViewController: UIViewController {
         
         //clearing out text field
         pokemonIDTextField.text = ""
-        //Replacing spaces in the name/title with + so they can be used as part of the url
-        let pokemonIDURL = pokemonID.replacingOccurrences(of: " ", with: "+")
         //Building our complete request URL
         let requestURL = pokemonAPIBaseURL + pokemonID
         
+        Alamofire.request(requestURL).responseJSON {(response ) in
+            switch response.result {
+            case .success(let value):
+                let json = JSON(value)
+                self.pokemonDescTextView.text = json["pokemon"].stringValue
+            case .failure(let error) :
+                self.pokemonDescTextView.text = "Invalid selection entered or an error occured please try again"
+                print(error.localizedDescription)
+            }
+        }
 }
 }
